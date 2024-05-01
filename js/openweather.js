@@ -39,7 +39,7 @@ function fetchlocation(apicall){
         if (httpRequest.readyState === 4 && httpRequest.status === 200) {
             const location = JSON.parse(httpRequest.responseText);
 
-            document.querySelector(".current-location").innerHTML = `<h3>Locaiton</h3><h4 class="text-success" id="max-temp-text">${location.features[0].properties.address_line1},${location.features[0].properties.city},${location.features[0].properties.country}</h4>`;
+            document.querySelector(".current-location").innerHTML = `<h3>Locaiton</h3><h4 class="text-success" id="max-temp-text">${location.features[0].properties.address_line1}, ${location.features[0].properties.city}, ${location.features[0].properties.country}</h4>`;
             // console.log(location , 'reverse Geocoding');
         }
     }
@@ -80,8 +80,9 @@ function fetchWeatherForecastOpenWeather(apiCall) {
             const forecast = JSON.parse(httpRequest.responseText);
 
             document.querySelector(".current-temp").innerHTML = `<h3>Current Temp</h3><h4 class="text-danger" id="current-temp-text">${(forecast.current.temp - 273.15).toFixed()}&deg Celcius</h4>`;
-            document.querySelector(".max-temp").innerHTML = `<h4>Max Temp</h4><h5 class="text-danger" id="Max-temp-text">${(forecast.daily[0].temp.max - 273.15).toFixed()}&deg Celcius</h4>`;
-            document.querySelector(".min-temp").innerHTML = `<h4>Min Temp</h4><h5 class="text-warning" id="Min-temp-text">${(forecast.daily[0].temp.min - 273.15).toFixed()}&deg Celcius</h4>`;
+            document.querySelector(".current-temp-feels").innerHTML = `<h4>Current Temp</h4><h5 class="text-warning" id="current-temp-feels-text">${(forecast.current.feels_like - 273.15).toFixed()}&deg Celcius</h5>`;
+            document.querySelector(".current-max-temp").innerHTML = `<h4>Max Temp</h4><h5 class="text-danger" id="Max-temp-text">${(forecast.daily[0].temp.max - 273.15).toFixed()}&deg Celcius</h4>`;
+            document.querySelector(".current-min-temp").innerHTML = `<h4>Min Temp</h4><h5 class="text-warning" id="Min-temp-text">${(forecast.daily[0].temp.min - 273.15).toFixed()}&deg Celcius</h4>`;
             document.querySelector(".icon").innerHTML = `<img src="${weathericons}${forecast.current.weather[0].icon}@2x.png" alt="Weather Icon">`;
             document.querySelector(".currentweatherdescription").innerHTML = `<p class="text-white"> ${forecast.current.weather[0].description} <p>`;
 
