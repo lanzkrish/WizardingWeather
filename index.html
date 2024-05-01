@@ -26,7 +26,7 @@
    </section>
 <section class="tempsearch">
     <div class="row">
-        <div class="col-lg-6 col-sm-6">
+        <div class="col-lg-6 col-sm-12">
             <div class="container py-3">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-lg-3">
@@ -64,27 +64,31 @@
                 </div>
                </div>
         </div>
-        <div class="col-lg-6 col-sm-6">
+        <div class="col-lg-6 col-sm-12">
             <div class="container m-3">
                 <div class="row py-3 display-flex justify-content-right">
-                    <div class="col-lg-4">
-                        <input type="text" id="inputLocation" class="form-control" placeholder="Enter Location to search">
+                    <div class="col-lg-4 col-sm-8">
+                        <div class="row px-3">
+                            <input type="text" id="inputLocation" class="form-control" placeholder="Enter Location to search">
+                        </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-2">
                         <button type="submit" onclick="required()" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
                 <div class="row container-fluid">
                     <div class="row">
                         <div class="col-sm-6 col-lg-4">
-                            <select class="form-select locationSelect" id="locationSelect" aria-label="Default select example" disabled>
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                </select>
+                            <div class="row px-3">
+                                <select class="form-select locationSelect" id="locationSelect" aria-label="Default select example" disabled>
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    </select>
+                            </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-2">
                             <button type="submit" onclick="newrequired()" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </div>
