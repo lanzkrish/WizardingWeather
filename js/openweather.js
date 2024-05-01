@@ -79,7 +79,7 @@ function fetchWeatherForecastOpenWeather(apiCall) {
         if (httpRequest.readyState === 4 && httpRequest.status === 200) {
             const forecast = JSON.parse(httpRequest.responseText);
 
-            document.querySelector(".current-temp").innerHTML = `<h3>Current Temp</h3><h4 class="text-danger" id="current-temp-text">${(forecast.current.temp - 273.15).toFixed()}&deg Celcius</h4>`;
+            document.querySelector(".current-temp").innerHTML = `<h3 class="col-sm-12">Current Temp</h3><h4 class="text-danger" id="current-temp-text">${(forecast.current.temp - 273.15).toFixed()}&deg Celcius</h4>`;
             document.querySelector(".current-temp-feels").innerHTML = `<h4>Current Temp</h4><h5 class="text-warning" id="current-temp-feels-text">${(forecast.current.feels_like - 273.15).toFixed()}&deg Celcius</h5>`;
             document.querySelector(".current-max-temp").innerHTML = `<h4>Max Temp</h4><h5 class="text-danger" id="Max-temp-text">${(forecast.daily[0].temp.max - 273.15).toFixed()}&deg Celcius</h4>`;
             document.querySelector(".current-min-temp").innerHTML = `<h4>Min Temp</h4><h5 class="text-warning" id="Min-temp-text">${(forecast.daily[0].temp.min - 273.15).toFixed()}&deg Celcius</h4>`;
