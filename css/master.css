@@ -1,0 +1,44 @@
+body {
+  background-color: #c1cde7;
+  color: rgb(19, 19, 19);
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+}
+
+.header{
+    position: relative;
+    display: flex;
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .header h1 {
+    font-size: 5rem;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .header h1 {
+        font-size: 4rem;
+      }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    
+}
