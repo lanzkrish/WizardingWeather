@@ -4,7 +4,7 @@ const GeofiApi = '35786225f19b4821b36337399bf836ca';
 
 const openApiCall='https://api.openweathermap.org/data/3.0/onecall';
 const reverseGeoCoding ='https://api.geoapify.com/v1/geocode/reverse';
-const searchLocation = 'http://api.openweathermap.org/geo/1.0/direct'
+const searchLocation = 'https://api.openweathermap.org/geo/1.0/direct'
 
 const weathericons = 'https://openweathermap.org/img/wn/'
 
