@@ -137,7 +137,7 @@ function getLocationkey(locationinput) {
             // return locationKey
         }
     }
-    httpRequest.open('GET', searchLocation+`?q=${locationinput}&limit=2&`+`appid=${apikey2}` );
+    httpRequest.open('GET', searchLocation+`?q=${locationinput}&limit=5&`+`appid=${apikey2}` );
     httpRequest.send();
 }
 
